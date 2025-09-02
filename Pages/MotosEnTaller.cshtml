@@ -1,0 +1,131 @@
+﻿@page
+@model MotoState__.NetCore_Razor.Pages.MotosEnTallerModel
+@{
+    ViewData["Title"] = "Pizarra de Motos";
+}
+
+<!-- Incluir Aceternity UI vía CDN -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+
+<h2 class="text-2xl font-bold mb-6">Pizarra de Motos en el Taller</h2>
+
+<!-- Filtros de visualización -->
+<div class="flex flex-wrap gap-4 mb-6">
+    <select class="border rounded px-3 py-2">
+        <option selected>Ordenar por fecha</option>
+        <option value="2">Estado</option>
+    </select>
+    <input type="text" class="border rounded px-3 py-2 flex-1" placeholder="Buscar por placa o modelo" />
+</div>
+
+<!-- Pizarra de Motos -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-1000">
+
+    <!-- Tarjeta 1 -->
+    <div class="card-container">
+        <div class="card-body border rounded-xl shadow p-4 flex flex-col bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 transition-transform duration-500 group/card">
+            <div class="card-item" data-translate-z="50">
+                <img src="https://imgs.search.brave.com/_l1IOvATzB8D9b-19zOFCtVtPaRxpvRvMYESFVXIM3g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmlrZWJvdW5kLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAx/OC8wNi9CTVctSzEw/MC0yLTMwMHgyMDAu/anBn"
+                     class="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl transition-shadow mb-4" alt="Honda CB500F" />
+            </div>
+            <div class="card-item" data-translate-z="20" class="flex flex-col">
+                <h5 class="font-semibold text-lg mb-2">Honda CB500F</h5>
+                <p class="text-sm mb-1">Fecha de ingreso: 10/04/2024</p>
+                <p class="text-sm mb-2">Diagnóstico preliminar realizado</p>
+            </div>
+            <div class="card-item" data-translate-z="10" class="flex items-center gap-2 mt-auto">
+                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="text-sm font-medium">En revisión</span>
+            </div>
+            <div class="card-item" data-translate-z="20" class="mt-4">
+                <button class="flex items-center justify-center gap-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                    <i data-feather="refresh-ccw" class="w-4 h-4"></i>
+                    Actualizar estado
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card-container">
+        <div class="card-body border rounded-xl shadow p-4 flex flex-col bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 transition-transform duration-500 group/card">
+            <div class="card-item" data-translate-z="50">
+                <img src="https://cdn.pixabay.com/photo/2020/10/24/17/17/motorcycle-5683129_960_720.jpg"
+                     class="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl transition-shadow mb-4" alt="Yamaha MT07" />
+            </div>
+            <div class="card-item" data-translate-z="20" class="flex flex-col">
+                <h5 class="font-semibold text-lg mb-2">Yamaha MT07</h5>
+                <p class="text-sm mb-1">Fecha de ingreso: 02/04/2024</p>
+                <p class="text-sm mb-2">Problema con el encendido</p>
+            </div>
+            <div class="card-item" data-translate-z="10" class="flex items-center gap-2 mt-auto">
+                <span class="w-3 h-3 rounded-full bg-gray-400"></span>
+                <span class="text-sm font-medium">Esperando repuesto</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card-container">
+        <div class="card-body border rounded-xl shadow p-4 flex flex-col bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 transition-transform duration-500 group/card">
+            <div class="card-item" data-translate-z="50">
+                <img src="https://cdn.pixabay.com/photo/2017/07/20/17/46/motorbike-2524774_960_720.jpg"
+                     class="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl transition-shadow mb-4" alt="Kawasaki Ninja 400" />
+            </div>
+            <div class="card-item" data-translate-z="20" class="flex flex-col">
+                <h5 class="font-semibold text-lg mb-2">Kawasaki Ninja 400</h5>
+                <p class="text-sm mb-1">Fecha de ingreso: 25/03/2024</p>
+                <p class="text-sm mb-2">Puga de líquido refrigerante</p>
+            </div>
+            <div class="card-item" data-translate-z="10" class="flex items-center gap-2 mt-auto">
+                <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                <span class="text-sm font-medium">En reparación</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="card-container">
+        <div class="card-body border rounded-xl shadow p-4 flex flex-col bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 transition-transform duration-500 group/card">
+            <div class="card-item" data-translate-z="50">
+                <img src="https://cdn.pixabay.com/photo/2016/04/01/11/14/motorbike-1309008_960_720.jpg"
+                     class="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl transition-shadow mb-4" alt="BMW F 800 GS" />
+            </div>
+            <div class="card-item" data-translate-z="20" class="flex flex-col">
+                <h5 class="font-semibold text-lg mb-2">BMW F 800 GS</h5>
+                <p class="text-sm mb-1">Fecha de ingreso: 20/03/2024</p>
+                <p class="text-sm mb-2">Listo para retirar</p>
+            </div>
+            <div class="card-item" data-translate-z="10" class="flex items-center gap-2 mt-auto">
+                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                <span class="text-sm font-medium">Listo para retirar</span>
+            </div>
+            <div class="card-item" data-translate-z="20" class="mt-4">
+                <button class="flex items-center justify-center gap-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                    <i data-feather="refresh-ccw" class="w-4 h-4"></i>
+                    Actualizar estado
+                </button>
+            </div>
+        </div>
+    </div>
+    
+  <!-- Tarjeta Skeleton -->
+<div class="card-container">
+    <div class="card-body border rounded-xl shadow p-4 flex flex-col bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+        <div class="flex flex-col gap-4 w-full">
+            <div class="skeleton h-32 w-full rounded-xl"></div>
+            <div class="skeleton h-4 w-28"></div>
+            <div class="skeleton h-4 w-full"></div>
+            <div class="skeleton h-4 w-full"></div>
+            <button class="flex items-center justify-center gap-2 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition">
+                    <i data-feather="plus" class="w-4 h-4"></i>
+                    Agregar nueva moto
+                </button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
